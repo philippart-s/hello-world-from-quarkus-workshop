@@ -166,9 +166,9 @@ Press [r] to re-run, [o] Toggle test output, [:] for the terminal, [h] for more 
 
 ### Release and tag the application
   - create the JAR: `mvn clean package`
-  - create the docker image: `docker build -f src/main/docker/Dockerfile.jvm -t 56hkk1xk.gra7.container-registry.ovh.net/workshop/<username>hello-world-from-quarkus:1.0.0 .`, for example `docker build -f src/main/docker/Dockerfile.jvm -t 56hkk1xk.gra7.container-registry.ovh.net/workshop/wilda/hello-world-from-quarkus:1.0.0 .`
+  - create the docker image: `docker build -f src/main/docker/Dockerfile.jvm -t 56hkk1xk.gra7.container-registry.ovh.net/workshop/<username>/hello-world-from-quarkus-workshop:1.0.0 .`, for example `docker build -f src/main/docker/Dockerfile.jvm -t 56hkk1xk.gra7.container-registry.ovh.net/workshop/wilda/hello-world-from-quarkus-workshop:1.0.0 .`
   - connect the docker client to the Harbor registry: `docker login 56hkk1xk.gra7.container-registry.ovh.net`
-  - push the image previously created: `docker push 56hkk1xk.gra7.container-registry.ovh.net/workshop/<username>/hello-world-from-quarkus:1.0.0`, for example `docker push 56hkk1xk.gra7.container-registry.ovh.net/workshop/wilda/hello-world-from-quarkus:1.0.0`
+  - push the image previously created: `docker push 56hkk1xk.gra7.container-registry.ovh.net/workshop/<username>/hello-world-from-quarkus-workshop:1.0.0`, for example `docker push 56hkk1xk.gra7.container-registry.ovh.net/workshop/wilda/hello-world-from-quarkus-workshop:1.0.0`
   - push all the code to the repository
   - create the release 1.0.0 in Github: see [official documentation](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
 > Note that the GitHub release version must be the same that the previously created docker image created  
